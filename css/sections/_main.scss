@@ -1,0 +1,19 @@
+@use "../overalstyles/inheritance";
+@use "../overalstyles/mixins";
+@use "../overalstyles/variables" as *;
+
+.main-section {
+border: none;
+padding:1em;
+    h5 {
+        color: burlywood;
+        font-size: 2rem;
+        font-weight:bold;
+        text-decoration: underline;
+    }
+
+    p {
+        color: #aa57cc;
+        font-size:1rem;
+    }
+}

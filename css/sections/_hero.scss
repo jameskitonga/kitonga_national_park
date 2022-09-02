@@ -1,0 +1,23 @@
+@use "../overalstyles/inheritance";
+@use "../overalstyles/mixins";
+@use "../overalstyles/variables" as *;
+
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../../images/elephant-comingfrom-water.jpeg") no-repeat center center/cover;
+    text-align: center;
+    padding: 4em;
+
+    h2 {
+        text-decoration: underline;
+        color: burlywood;
+        font-weight: bold;
+        font-size: 3em;
+        padding: .9em;
+    }
+
+    p {
+        color: white;
+        font-size: 2em;
+    }
+}

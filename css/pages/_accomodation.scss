@@ -1,0 +1,19 @@
+@use "../overalstyles/variables" as *;
+@use "../overalstyles/mixins";
+
+
+  header{
+        background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../../images/Maasai Mara _ Book Accommodation Directly_files/background-accomadation.jpeg") no-repeat center center/cover;
+        height:100vh;
+        h1{
+            margin:0 auto;
+            color:whitesmoke;
+            font-weight: bold;
+            padding:1em 6em;
+            font-size:4rem;
+        }
+        h4{
+            color:whitesmoke;
+            font-size:2rem
+        }
+  }

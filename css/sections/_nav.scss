@@ -1,0 +1,16 @@
+@use "../overalstyles/inheritance";
+@use "../overalstyles/mixins";
+@use "../overalstyles/variables" as *;
+
+
+
+.navbar {
+    cursor: pointer;
+    background-color: burlywood;
+    color: #aa57cc;
+
+    img {
+
+        @extend %buffalo-logo;
+    }
+}

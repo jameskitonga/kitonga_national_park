@@ -1,0 +1,33 @@
+@use "overalstyles/variables" as *;
+@use "sections/nav";
+@use "sections/hero";
+@use "sections/footer";
+@use "sections/main";
+@use "overalstyles/base";
+
+@use "pages/contactus";
+@use "pages/about us" as *;
+@use "pages/accomodation";
+@use "pages/createaccount";
+
+
+// .navbar{
+//     background-color: burlywood;
+
+//     img{
+//         width: 20%;
+//             border-radius: 50%;
+//             background-color: transparent;
+//             box-shadow: 2px 2px 2px 2px black;
+
+//     }
+// }
+// .hero{
+//     p span {
+//             color: red;
+//             font-size: 1.5rem;
+//         }
+//         p{
+
+//         }
+// }

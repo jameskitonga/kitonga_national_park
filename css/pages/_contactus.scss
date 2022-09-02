@@ -1,0 +1,56 @@
+@use "../overalstyles/inheritance";
+@use "../overalstyles/mixins";
+@use "../overalstyles/variables" as *;
+
+
+.navbar {
+    cursor: pointer;
+    background-color: burlywood;
+    color: #aa57cc;
+
+    img {
+
+        @extend %buffalo-logo;
+    }
+}
+
+.form-contact {
+    background-color: whitesmoke;
+
+    h2 {
+        color: burlywood;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .form-contact-park {
+        color: burlywood;
+        border: 3px solid #aa57cc;
+        margin: 2em;
+.input-label{
+    display:flex;
+margin:2em;
+
+}
+  
+        
+          
+       
+
+    }
+}
+
+.nav-park {
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("../../images/gazel.jpeg") no-repeat center center/cover;
+
+    h2,h3{
+        color:burlywood;
+        font-weight:bold;
+        font-size:2rem;
+        text-decoration:underline;
+    }
+    p,span{
+        font-size:1rem;
+        color:#aa57cc;
+    }
+}

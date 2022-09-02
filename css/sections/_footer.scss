@@ -1,0 +1,24 @@
+@use "../overalstyles/inheritance";
+@use "../overalstyles/mixins";
+@use "../overalstyles/variables" as *;
+
+.footer-item {
+    color:#aa57cc;
+    background-color: burlywood;
+ul{
+    cursor: pointer;
+   padding:2em;
+
+}
+    img {
+
+        @extend %buffalo-logo;
+    }
+    h2{
+        color:black;
+        text-decoration: underline;
+        
+    }
+ 
+   
+}
