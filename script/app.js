@@ -1,5 +1,5 @@
 
-
+const subMit=document.getElementsByClassName("btn")
 
 
 const passWord=getElementById("password")
@@ -120,4 +120,8 @@ login.addEventListener("click", function () {
 })
 
 
+btn.addEventListener("click", () => {
+    // e.preventDefault()
+    alert("we have got you application")
 
+})

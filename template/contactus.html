@@ -34,8 +34,7 @@
           <a href="./contactus.html"><li>Contact US</li></a>
         </ul>
         <ul class="nav-right d-flex gap-3 list-unstyled">
-          <li>Log In</li>
-          <li>Create Account</li>
+           <a href="./template/login.html"> <li>Log In/Create Account</li></a>
         </ul>
       </nav>
     </div>
@@ -64,31 +63,53 @@
       <main class="main-park container">
         <h2>Send us your feedback.</h2>
         <p>Please fill out the information below</p>
-        <!-- <form id="contact-form">
-        <input type="hidden" name="contact_number">
-        <label>Name</label>
-        <input type="text" name="user_name">
-        <label>Email</label>
-        <input type="email" name="user_email">
-        <label>Message</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send">
-    </form> -->
-    <table id="password">
-        <tr>
-            <td>Password:</td>
-            <td><input type="password" id="txtPassword" /></td>
-        </tr>
-        <tr>
-            <td>Confirm Password:</td>
-            <td><input type="password" id="txtConfirmPassword" /></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="button" id="btnSubmit" value="Submit" onclick="return Validate()" /></td>
-        </tr>
-    </table>
-      </main>
+      
+   <section class="container card article">
+    
+       
+          <!-- <input type="radio" name="tabs" id="tab2" /> -->
+          <!-- <label class="label_register regiter__tab" for="tab2">Register</label> -->
+          <div id="tab-content2" class="tab-content">
+            <div class="register__form">
+              <form >
+                <div class=" mb-3 ">
+
+                    <label for="first name">First Name:</label>
+                    <input class="first-name" type="text" placeholder="First Name">
+                </div>
+                <div class=" mb-3">
+
+                    <label for="last name">Last Name:</label>
+                    <input class="last-name" type="text" placeholder="Last Name">
+                </div>
+                <div class=" mb-3">
+
+                    <label for="Email Address">Email Address: </label
+                        ><label class="eaddress jsstyle" for=""></label>
+                        <input class="email-input" type="email" placeholder="Email"/>
+                    </div>
+                <div class=" mb-3">
+
+                    <label for="password">Password:</label>
+                    <label class="pword jsstyle" for=""></label>
+                    <input class="password-input" type="password" placeholder="Password" />
+                </div>
+                <div class=" mb-2">
+
+                    <label for="confirm">Confirm Password:</label>
+                    <label class="confirm jsstyle" for=""></label>
+                    <input class="confirm-password" type="password" placeholder="confirm password" />
+                </div>
+                
+                    
+                    <a href="../"><button type="button" class="btn btn-warning">submit</button>
+               </a>
+              </form>
+            </div>
+          </div>
+       
+      </ul>
+    </section>
     </div>
      <div class="footer-item">
       <footer class="container">
