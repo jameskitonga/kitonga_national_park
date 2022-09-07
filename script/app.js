@@ -1,48 +1,3 @@
-function validate_password() {
-
-//     var pass = document.getElementById('pass').value;
-//     var confirm_pass = document.getElementById('confirm_pass').value;
-//     if (pass != confirm_pass) {
-//         document.getElementById('wrong_pass_alert').style.color = 'red';
-//         document.getElementById('wrong_pass_alert').innerHTML
-//             = '☒ Use same password';
-//         document.getElementById('create').disabled = true;
-//         document.getElementById('create').style.opacity = (0.4);
-//     } else {
-//         document.getElementById('wrong_pass_alert').style.color = 'green';
-//         document.getElementById('wrong_pass_alert').innerHTML =
-//             '🗹 Password Matched';
-//         document.getElementById('create').disabled = false;
-//         document.getElementById('create').style.opacity = (1);
-//     }
-// }
-
-// function wrong_pass_alert() {
-//     if (document.getElementById('pass').value != "" &&
-//         document.getElementById('confirm_pass').value != "") {
-//         alert("Your response is submitted");
-//     } else {
-//         alert("Please fill all the fields");
-//     }
-// }
-
-// window.onload = function () {
-//     document.getElementById('contact-form').addEventListener('submit', function (event) {
-//         event.preventDefault();
-//         // generate a five digit number for the contact_number variable
-//         this.contact_number.value = Math.random() * 100000 | 0;
-//         // these IDs from the previous steps
-//         emailjs.sendForm('contact_service', 'contact_form', this)
-//             .then(function () {
-//                 console.log('SUCCESS!');
-//             }, function (error) {
-//                 console.log('FAILED...', error);
-//             });
-//     });
-// }
-
-
-
 
 
 
@@ -58,7 +13,111 @@ const passWord=getElementById("password")
         }
         return true;
     }
-
+const emailLogin = document.querySelector(".email-login")
+const passwordLogin = document.querySelector(".password-login")
+const login = document.querySelector(".login")
+// register form
+const firstName = document.querySelector(".first-name")
+const lastName = document.querySelector(".last-name")
+const emailAddress = document.querySelector(".email-input")
+const password = document.querySelector(".password-input")
+const confirmPassword = document.querySelector(".confirm-password")
+const submit = document.querySelector(".submit")
+const letters = "abcdefghijklmnopqrstuvwxyz"
+const upperCase = letters.toUpperCase()
+const specialChar = "!@#$%^&*()<>;?"
+let upper = []
+let lower = []
+let special = []
+let num = []
+// const passwordValue = emailInput.value
+// innertext
+const eAddress = document.querySelector(".eaddress")
+const passwordLabel = document.querySelector(".pword")
+const confirmPasswrd = document.querySelector(".confirm")
+// Functions
+const passwordChecks = () => {
+    if (password.value === "") {
+        upper = [];
+        lower = [];
+        special = []
+    }
+    for (char of password.value) {
+        if (letters.includes(char)) {
+            lower.push(char)
+        }
+        else if (upperCase.includes(char)) {
+            upper.push(char)
+        }
+        else if (specialChar.includes(char)) {
+            special.push(char)
+        }
+        else if (Number(char) !== NaN) {
+            num.push(char)
+        }
+        console.log(lower)
+        console.log(upper)
+        console.log(special)
+        console.log(num)
+        if (upper.length == 0) {
+            passwordLabel.innerHTML = "Your password must have a least one capital letter"
+        }
+        else if (lower.length == 0) {
+            passwordLabel.innerHTML = "Your password must have at least one lower case letter"
+        }
+        else if (special.length == 0) {
+            passwordLabel.innerHTML = "Your password must have at least one special character"
+        }
+        else if (num.length == 0) {
+            passwordLabel.innerHTML = "Your password must have at least one number"
+        } else if (password.value.length < 8 || password.value.length > 12) {
+            passwordLabel.innerHTML = "Your password should be between 8 to 12 characters";
+            console.log(passwordLabel)
+            console.log("Your password should be between 8 to 12 characters")
+        } else {
+            passwordLabel.innerHTML = "";
+        }
+    }
+}
+const setLocalStorage = () => {
+    // setLocalStorage
+    let data;
+    const details = {
+        firstName: firstName.value,
+        lastName: lastName.value,
+        fullname: `${firstName.value} ${lastName.value}`,
+        email: emailAddress.value,
+        password: password.value,
+    }
+    if (localStorage.getItem("details") == null) {
+        data = [];
+        data.push(details)
+        localStorage.setItem("details", JSON.stringify(data))
+    } else {
+        data = JSON.parse(localStorage.getItem("details"));
+        data.push(details);
+        localStorage.setItem("details", JSON.stringify(data))
+    }
+}
+// Event listeners
+submit.addEventListener("click", function (e) {
+    console.log(password.value.length)
+    if (emailAddress.value == "") {
+        eAddress.innerHTML = "Please enter your email address"
+        console.log("Please enter")
+    } else if (password.value !== confirmPassword.value) {
+        confirmPasswrd.innerHTML = "Your password does not match"
+        console.log("Your password doesn't match")
+    } else {
+        setLocalStorage()
+    }
+    // Local Storage
+})
+password.addEventListener("keyup", passwordChecks);
+login.addEventListener("click", function () {
+    console.log(passwordLogin.value)
+    if (emailLogin.length > 1) { console.log("Hi") }
+})
 
 
 
